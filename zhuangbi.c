@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define BUF_LEN 4
+#define BUF_LEN 2
 
 int main(int argc, char *argv[]) {
 	char *bin_list[] = {
@@ -22,10 +22,10 @@ int main(int argc, char *argv[]) {
 				a = buffer[j] >> 4;
 				b = buffer[j] << 4;
 				b = b >> 4;
-				printf("%s%s ", bin_list[a], bin_list[b]);
+				printf("%s%s", bin_list[a], bin_list[b]);
 				count++;
 			}
-			//sleep(1);
+			sleep(1);
 		}
 		fclose(file);
 		printf("\nFile size: %lld bytes\n", count);
