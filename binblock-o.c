@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
 				printf("%s%s", bin_list[a], bin_list[b]);
 				count++;
 			}
-			sleep(1);
+			sleep(2);
 		}
 		fclose(file);
 		printf("\nFile size: %lld bytes\n", count);
