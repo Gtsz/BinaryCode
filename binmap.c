@@ -2,10 +2,10 @@
 
 int main(int argc, char *argv[]) {
 	char *bin_list[] = {
-		"0000", "0001", "0010", "0011",
-		"0100", "0101", "0110", "0111",
-		"1000", "1001", "1010", "1011",
-		"1100", "1101", "1110", "1111"
+		"    ", "   #", "  # ", "  ##",
+		" #  ", " # #", " ## ", " ###",
+		"#   ", "#  #", "# # ", "# ##",
+		"##  ", "## #", "### ", "####"
 	};
 	FILE *file;
 	unsigned char buffer[1];
@@ -18,9 +18,9 @@ int main(int argc, char *argv[]) {
 			a = buffer[0] >> 4;
 			b = buffer[0] << 4;
 			b = b >> 4;
-			printf("%s%s ", bin_list[a], bin_list[b]);
+			printf("%s%s", bin_list[a], bin_list[b]);
 			count++;
-			#sleep(1);
+			sleep(1);
 		}
 		fclose(file);
 		printf("\nFile size: %lld bytes\n", count);
